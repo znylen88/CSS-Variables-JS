@@ -9,7 +9,7 @@
 
   <div class="controls">
     <label for="spacing">Spacing:</label>
-    <input id="spacing" type="range" name="spacing" min="10" max="200" value="15" data-sizing="px">
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="0" data-sizing="px">
 
     <label for="blur">Blur:</label>
     <input id="blur" type="range" name="blur" min="0" max="25" value="0" data-sizing="px">
@@ -29,7 +29,7 @@
       --base: #808080;
       --spacing: 10px;
       --blur: 0px;
-      --background: #ffffff;
+      --background: #dddddd;
     }
 
     img {
@@ -64,6 +64,22 @@
 
     input {
       width: 100px;
+      overflow: hidden;
+      -webkit-appearance: none;
+      background-color: rgb(73, 114, 73);
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+    }
+    
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+      background: #434343;
     }
   </style>
 
